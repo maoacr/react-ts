@@ -8,7 +8,8 @@ const initialState = {
 type ActionType = 
   |{type: 'incrementar'}
   |{type: 'decrementar'}
-  |{type: 'custom', payload: number};
+  |{type: 'custom', payload: number}
+  |{type: 'custom2', payload: number};
 
 const contadorReducer = (state: typeof initialState, action: ActionType) => {
   switch (action.type) {
@@ -26,6 +27,11 @@ const contadorReducer = (state: typeof initialState, action: ActionType) => {
         return{
           ...state,
           contador: state.contador + action.payload
+        }
+        case 'custom2':
+        return{
+          ...state,
+          contador: state.contador - action.payload
         }
     default:
       return state;
@@ -51,7 +57,12 @@ export const ContadorRed = () => {
       <button
         onClick={()=> dispatch({type: 'custom', payload: 100})}
         className="btn btn-outline-danger">
-        100
+        +100
+      </button>
+      <button
+        onClick={()=> dispatch({type: 'custom2', payload: 50})}
+        className="btn btn-outline-danger">
+        -50
       </button>
     </>
   )

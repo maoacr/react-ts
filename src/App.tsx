@@ -3,6 +3,7 @@ import { User } from "./components/User";
 
 import { TimerPadre } from "./components/TimerPadre";
 import { ContadorRed } from "./components/ContadorRed";
+import { Formulario } from "./components/Formulario";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       <h2 className="mt-5">UseReducer</h2>
       <hr/>
       <ContadorRed />
+      <h2 className="mt-5">Formulario</h2>
+      <hr/>
+      <Formulario />
     </>
   );
 }
