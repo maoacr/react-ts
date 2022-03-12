@@ -37,7 +37,7 @@ export const Formulario = () => {
           type="email" 
           className="form-control" 
           name="email"
-          value={formulario.email}
+          value={email}
           onChange={handleChange}
         />
       </div>
@@ -47,7 +47,7 @@ export const Formulario = () => {
           type="text" 
           className="form-control" 
           name="nombre"
-          value={formulario.nombre}
+          value={nombre}
           onChange={handleChange} 
         />
       </div>
@@ -57,7 +57,7 @@ export const Formulario = () => {
           type="number" 
           className="form-control" 
           name="edad"
-          value={formulario.edad}
+          value={edad}
           onChange={handleChange} 
         />
       </div>
